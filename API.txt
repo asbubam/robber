@@ -1,0 +1,29 @@
+GET /api/login
+	req: username, password
+	res: points, steal_count, arrested_count
+
+GET /api/friendslist
+	req: username
+	res: [{user_image, username, hide}, …]
+	state: hide={y|n}
+
+POST /api/hide
+	req: username
+	res: [{x: 3, y:2, points: 100}, …]
+
+POST /api/buy
+	req: username, item_no
+	item_no : 0 (dogs), 1 (camera)
+
+GET /api/roominfo
+	상대방의 방에 숨겨진 정보 내려줌
+	req: friend_username
+	res: item_no: XX, matrix = [{x: 3, y: 2, points: 100}, …]
+
+POST /api/found
+	req: username, friend_username, points
+	res: ++steal_count
+
+POST /api/notfound
+	req: username
+	res: ++arrested_count 
