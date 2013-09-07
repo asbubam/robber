@@ -1,13 +1,14 @@
 {
-  "name": "application-name",
+  "name": "robber",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app"
   },
   "dependencies": {
-    "express": "3.4.0",
-    "ejs": "*",
-    "less-middleware": "*"
+    "restify": "latest",
+    "step": "latest",
+    "bunyan": "latest"
   }
 }
+
