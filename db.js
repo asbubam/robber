@@ -32,7 +32,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://casaofgila.files.wordpress.com/2011/07/qa-guy.jpg',
+			user_image: 'http://2dal.com/public/qa-guy.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -46,7 +46,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 2,
-			user_image: 'http://cfile22.uf.tistory.com/image/1461BC114B115EBA046288',
+			user_image: 'http://2dal.com/public/alice2m.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -60,7 +60,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4W',
+			user_image: 'http://2dal.com/public/images.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -75,7 +75,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://s3.amazonaws.com/crunchbase_prod_assets/assets/images/resized/0001/0576/10576v3-max-250x250.jpg',
+			user_image: 'http://2dal.com/public/10576v3-max-250x250.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -89,7 +89,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'https://si0.twimg.com/profile_images/3246653188/776779886691d298c8fca38a28bcdefc.jpeg',
+			user_image: 'http://2dal.com/public/776779886691d298c8fca38a28bcdefc.jpeg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -103,7 +103,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4W',
+			user_image: 'http://2dal.com/public/mario.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -117,7 +117,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7YT0Vw3yeMpOm9PBbP8N-QZY3UTFBWI-HmWzInvBPp8x3tTd_3w',
+			user_image: 'http://2dal.com/public/wonder-woman-tv-series-04-g.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null

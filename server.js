@@ -23,6 +23,10 @@ server.get('/api/roominfo', roominfo);
 server.get('/api/robfail', robfail);
 server.get('/api/state', state);
 
+server.get(/\/public\/?.*/, restify.serveStatic({
+	directory: './public'
+}));
+
 /*
 server.on('after', restify.auditLogger({
   log: bunyan.createLogger({
