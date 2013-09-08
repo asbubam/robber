@@ -5,24 +5,24 @@ var Server = mongo.Server,
 		Bson = mongo.BSONPure;
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('robber', server, {safe: true});
+var db = new Db('robber', server, {safe: true});
 
 exports.init = function() {
 	db.open(function(err, db) {
-		if(err) {
+		if(!err) {
 			console.log('connected to robber db');
 			db.collection('users', {strict:true}, function(err, collection) {
 				if(err) {
 					console.log("The 'users' collection doesn't exist.");
+					populateDB();
 				}
-				populateDB();
 			});
 		}
 	});
 };
 
-function popluateDB() {
-		var users = [
+function populateDB() {
+	var users = [
 		{
 				username: "test",
 				pw: "1234",
@@ -37,11 +37,18 @@ function popluateDB() {
 				rob_count: 0,
 				robbed_count: 0
 
-		}];
- 
-		db.collection('users', function(err, collection) {
-				collection.insert(wines, {safe:true}, function(err, result) {});
-		});
- 
+		}
+	];
+
+	db.collection('users', function(err, collection) {
+			console.log(collection);
+			collection.insert(users, {safe:true}, function(err, result) {});
+	});
 };
 
+exports.findByUsername = function(options, callback) {
+	console.log('Retrieving user: ' + options.username);
+	db.collection('users', function(err, collection) {
+		collection.findOne(options, callback);
+	});
+}

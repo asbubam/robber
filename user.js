@@ -1,21 +1,19 @@
+var db = require('./db');
+
 exports.login = function(options, callback) {
 	var ret_data;
 	var err;
 
-	if(options.username == 'test' && options.pw == '1234') {
-		ret_data = { 
-			logged: 'Y',
-			points: 1000,
-			rob_count: 10,
-			robbed_count: 5
-		};
-	} else {
-		ret_data = {
-			logged: 'N'
+	db.findByUsername(options, function(err, res) {
+		if(res) {
+			ret_data = res;
+			ret_data.logged = 'Y';
+			callback(err, ret_data);
+		}	else {
+			ret_data = { logged: 'N' };
+			callback(err, ret_data);
 		}
-	}
-
-	callback(err, ret_data);
+	});
 }
 
 exports.friendslist = function(options, callback) {
