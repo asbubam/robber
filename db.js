@@ -89,7 +89,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com:3002/public/776779886691d298c8fca38a28bcdefc.jpeg',
+			user_image: 'http://2dal.com:3002/public/776779886691d298c8fca38a28bcdefc.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
