@@ -64,6 +64,63 @@ function populateDB() {
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
+		},
+
+		{
+			username: "techcrunch",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			hide: 'N',
+			item_no: 1,
+			user_image: 'http://s3.amazonaws.com/crunchbase_prod_assets/assets/images/resized/0001/0576/10576v3-max-250x250.jpg',
+			hide_pos: '',
+			fail: 'N',
+			auth_key: null
+		},
+		{
+			username: "flitto",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			hide: 'N',
+			item_no: 1,
+			user_image: 'https://si0.twimg.com/profile_images/3246653188/776779886691d298c8fca38a28bcdefc.jpeg',
+			hide_pos: '',
+			fail: 'N',
+			auth_key: null
+		},
+		{
+			username: "mario",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			hide: 'N',
+			item_no: 1,
+			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4W',
+			hide_pos: '',
+			fail: 'N',
+			auth_key: null
+		},
+		{
+			username: "wonderwoman",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			hide: 'N',
+			item_no: 1,
+			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7YT0Vw3yeMpOm9PBbP8N-QZY3UTFBWI-HmWzInvBPp8x3tTd_3w',
+			hide_pos: '',
+			fail: 'N',
+			auth_key: null
 		}
 	];
 
