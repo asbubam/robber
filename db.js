@@ -13,7 +13,7 @@ exports.init = function() {
 			console.log('connected to robber db');
 			db.collection('users', {strict:true}, function(err, collection) {
 				if(err) {
-					console.log("The 'users' collection doesn't exist.");
+					console.log("The 'users' collection doesn't exist. populateDB()");
 					populateDB();
 				}
 			});
@@ -24,31 +24,49 @@ exports.init = function() {
 function populateDB() {
 	var users = [
 		{
-				username: "test",
-				pw: "1234",
-				points: 1000,
-				rob_count: 0,
-				robbed_count: 0
+			username: "test",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			auth_key: null
 		},
 		{
-				username: "test2",
-				pw: "1234",
-				points: 1000,
-				rob_count: 0,
-				robbed_count: 0
-
+			username: "test2",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			auth_key: null
+		},
+		{
+			username: "test3",
+			pw: "1234",
+			points: 1000,
+			rob_count: 0,
+			robbed_count: 0,
+			logged: 'N',
+			auth_key: null
 		}
 	];
 
 	db.collection('users', function(err, collection) {
-			console.log(collection);
-			collection.insert(users, {safe:true}, function(err, result) {});
+		collection.insert(users, {safe:true}, function(err, result) {});
 	});
 };
 
 exports.findByUsername = function(options, callback) {
-	console.log('Retrieving user: ' + options.username);
 	db.collection('users', function(err, collection) {
 		collection.findOne(options, callback);
+	});
+}
+
+exports.friendsList = function(options, callback) {
+	db.collection('users', function(err, collection) {
+		collection.find().toArray(function(err, users) {
+			callback(null, users);
+		});
 	});
 }

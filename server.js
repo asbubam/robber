@@ -8,6 +8,7 @@ var db = require('./db');
 var user = require('./user');
 var room = require('./room');
 
+
 db.init();
 
 server.use(restify.queryParser());
