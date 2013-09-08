@@ -22,6 +22,7 @@ server.get('/api/hide', hide);
 server.get('/api/roominfo', roominfo);
 server.get('/api/robfail', robfail);
 server.get('/api/state', state);
+server.get('/api/robreset', robreset);
 
 server.get(/\/public\/?.*/, restify.serveStatic({
 	directory: './public'
@@ -105,6 +106,16 @@ function state(req, res, next) {
 	var username = req.params.username.toLowerCase();
 	
 	room.state({ username: username }, function (err, data) {
+		if(err) return handleError(err, next);
+		res.send(data);
+		return next();
+	});
+}
+
+function robreset(req, res, next) {
+	var username = req.params.username.toLowerCase();
+
+	room.robreset({ username: username }, function (err, data) {
 		if(err) return handleError(err, next);
 		res.send(data);
 		return next();

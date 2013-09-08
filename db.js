@@ -172,3 +172,18 @@ exports.robfail = function(options, callback) {
    	});
 	}); 
 };
+
+exports.robreset = function(options, callback) {
+	db.collection('users', function(err, collection) {
+		collection.update({'username': options.username}, {$set: {fail: 'N'}}, {safe:true}, function(err, result) {
+				if(err) {
+					console.log('Error updating user: ' + err);
+					callback(err, null);
+					res.send({'error':'An error has occurred'});
+				} else {
+					console.log('' + result + ' document(s) updated');
+					callback(null, result); 
+			}
+   	});
+	}); 
+};

@@ -90,3 +90,22 @@ exports.state = function(options, callback) {
 	});
 }
 
+exports.robreseet = function(options, callback) {
+	var ret_data;
+	var err;
+	
+	if(!options.username || options.username == '') {
+		return callback(new Error('You must login first.'));
+	}
+
+	db.robreset({username: options.username}, function(err, res) {
+		if(res) {
+			ret_data = {};
+			callback(err, ret_data);
+		}	else {
+			return callback(new Error('invalid user'));
+		}
+	});
+}
+
+
