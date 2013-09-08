@@ -44,7 +44,7 @@ function handleError(err, next) {
 }
 
 function login(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 	var pw = req.params.pw;
 
   user.login({ username: username, pw: pw }, function (err, data) {
@@ -55,7 +55,7 @@ function login(req, res, next) {
 }
 
 function friendslist(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 
 	user.friendslist({ username: username }, function (err, data) {
     if (err) return handleError(err, next);
@@ -65,7 +65,7 @@ function friendslist(req, res, next) {
 }
 
 function hide(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 	var hide = req.params.hide;
 
 	room.hide({ username: username, hide: hide }, function (err, data) {
@@ -76,7 +76,7 @@ function hide(req, res, next) {
 }
 
 function roominfo(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 	var friend_username = req.params.friend_username;
 	
 	room.roominfo({ username: username, friend_username: friend_username }, function (err, data) {
@@ -87,7 +87,7 @@ function roominfo(req, res, next) {
 }
 
 function robfail(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 	var friend_username = req.params.friend_username;
 	
 	room.robfail({ username: username, friend_username: friend_username }, function (err, data) {
@@ -98,7 +98,7 @@ function robfail(req, res, next) {
 }
 
 function state(req, res, next) {
-	var username = req.params.username;
+	var username = req.params.username.toLowerCase();
 	
 	room.state({ username: username }, function (err, data) {
 		if(err) return handleError(err, next);
