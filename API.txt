@@ -7,26 +7,31 @@ GET /api/friendslist
 	res: [{user_image, username, hide}, …]
 	state: hide={y|n}
 
-
-
 POST /api/hide
 	req: username, hide: 2,3,5
 	res: 
 
-
+/*
 POST /api/buy
 	req: username, item_no
 	item_no : 0 (dogs), 1 (camera)
+*/
 
 GET /api/roominfo
 	상대방의 방에 숨겨진 정보 내려줌
 	req: friend_username
-	res: item_no: XX, matrix = [{x: 3, y: 2, points: 100}, …]
+ 	res: item_no: XX, hide: 3, 5, 9]
 
-POST /api/found
-	req: username, friend_username, points
-	res: ++steal_count
 
-POST /api/notfound
+-- POST /api/found
+--	req: username, friend_username, points
+--	res: ++steal_count
+
+GET /api/robfail
+	req: username, friend_username
+
+GET /api/state
 	req: username
-	res: ++arrested_count 
+	res: {fail : N} -> {fail : Y}
+	res: ++arrested_count
+

@@ -20,6 +20,8 @@ server.get('/api/login', login);
 server.get('/api/friendslist', friendslist);
 server.get('/api/hide', hide);
 server.get('/api/roominfo', roominfo);
+server.get('/api/robfail', robfail);
+server.get('/api/state', state);
 
 /*
 server.on('after', restify.auditLogger({
@@ -83,3 +85,25 @@ function roominfo(req, res, next) {
 		return next();
 	});
 }
+
+function robfail(req, res, next) {
+	var username = req.params.username;
+	var friend_username = req.params.friend_username;
+	
+	room.robfail({ username: username, friend_username: friend_username }, function (err, data) {
+		if(err) return handleError(err, next);
+		res.send(data);
+		return next();
+	});
+}
+
+function state(req, res, next) {
+	var username = req.params.username;
+	
+	room.state({ username: username }, function (err, data) {
+		if(err) return handleError(err, next);
+		res.send(data);
+		return next();
+	});
+}
+
