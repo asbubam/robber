@@ -1,3 +1,5 @@
+var db = require('./db');
+
 exports.hide = function(options, callback) {
 	var ret_data;
 	var err;
@@ -6,17 +8,18 @@ exports.hide = function(options, callback) {
 		return callback(new Error('You must login first.'));
 	}
 
-	if(!options.x || !options.y || !options.points) {
+	if(!options.hide) {
 		return callback(new Error('invalid parameter'));
 	}
 
-	ret_data = [
-		{
-			x: options.x,
-			y: options.y,
-			points: 100
+	db.hide(options, function(err, res) {	
+		if(res) {
+			ret_data = {};
+		} else {
+			ret_data = {};
 		}
-	];
+	});
+	
 	callback(err, ret_data);
 }
 

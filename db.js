@@ -32,6 +32,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			user_image: 'http://casaofgila.files.wordpress.com/2011/07/qa-guy.jpg',
+			hide_pos: '',
 			auth_key: null
 		},
 		{
@@ -43,6 +44,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			user_image: 'http://cfile22.uf.tistory.com/image/1461BC114B115EBA046288',
+			hide_pos: '',
 			auth_key: null
 		},
 		{
@@ -54,6 +56,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			user_image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNWTYSG5-4HaHTKjV32lmP_iuG8RQ3ZDS1PsJoGG1Tpzz9ac4W',
+			hide_pos: '',
 			auth_key: null
 		}
 	];
@@ -67,7 +70,7 @@ exports.findByUsername = function(options, callback) {
 	db.collection('users', function(err, collection) {
 		collection.findOne(options, callback);
 	});
-}
+};
 
 exports.friendsList = function(options, callback) {
 	db.collection('users', function(err, collection) {
@@ -75,4 +78,19 @@ exports.friendsList = function(options, callback) {
 			callback(null, users);
 		});
 	});
-}
+};
+
+exports.hide = function(options, callback) {
+	db.collection('users', function(err, collection) {
+		collection.update({'username': options.username}, {$set: {hide: 'Y', hide_pos: options.hide}}, {safe:true}, function(err, result) {
+				if(err) {
+						console.log('Error updating user: ' + err);
+						callback(err, null);
+						res.send({'error':'An error has occurred'});
+				} else {
+						console.log('' + result + ' document(s) updated');
+						callback(null, result); 
+				}
+   	});
+	}); 
+};

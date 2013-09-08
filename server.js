@@ -18,7 +18,7 @@ server.use(restify.bodyParser());
 // routing
 server.get('/api/login', login);
 server.get('/api/friendslist', friendslist);
-server.post('/api/hide', hide);
+server.get('/api/hide', hide);
 server.get('/api/roominfo', roominfo);
 
 /*
@@ -64,8 +64,9 @@ function friendslist(req, res, next) {
 
 function hide(req, res, next) {
 	var username = req.params.username;
+	var hide = req.params.hide;
 
-	room.hide({ username: username }, function (err, data) {
+	room.hide({ username: username, hide: hide }, function (err, data) {
 		if(err) return handleError(err, next);
 		res.send(data);
 		return next();

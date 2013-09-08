@@ -7,9 +7,12 @@ GET /api/friendslist
 	res: [{user_image, username, hide}, …]
 	state: hide={y|n}
 
+
+
 POST /api/hide
-	req: username
-	res: [{x: 3, y:2, points: 100}, …]
+	req: username, hide: 2,3,5
+	res: 
+
 
 POST /api/buy
 	req: username, item_no
