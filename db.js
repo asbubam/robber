@@ -32,7 +32,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/qa-guy.jpg',
+			user_image: 'http://2dal.com:3002/public/qa-guy.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -46,7 +46,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 2,
-			user_image: 'http://2dal.com/public/alice2m.jpg',
+			user_image: 'http://2dal.com:3002/public/alice2m.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -60,7 +60,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/images.jpg',
+			user_image: 'http://2dal.com:3002/public/images.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -75,7 +75,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/10576v3-max-250x250.jpg',
+			user_image: 'http://2dal.com:3002/public/10576v3-max-250x250.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -89,7 +89,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/776779886691d298c8fca38a28bcdefc.jpeg',
+			user_image: 'http://2dal.com:3002/public/776779886691d298c8fca38a28bcdefc.jpeg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -103,7 +103,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/mario.jpg',
+			user_image: 'http://2dal.com:3002/public/mario.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
@@ -117,7 +117,7 @@ function populateDB() {
 			logged: 'N',
 			hide: 'N',
 			item_no: 1,
-			user_image: 'http://2dal.com/public/wonder-woman-tv-series-04-g.jpg',
+			user_image: 'http://2dal.com:3002/public/wonder-woman-tv-series-04-g.jpg',
 			hide_pos: '',
 			fail: 'N',
 			auth_key: null
