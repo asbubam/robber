@@ -6,8 +6,8 @@ exports.login = function(options, callback) {
 		ret_data = { 
 			logged: 'Y',
 			points: 1000,
-			steal_count: 10,
-			arrested_count: 5
+			rob_count: 10,
+			robbed_count: 5
 		};
 	} else {
 		ret_data = {
@@ -23,7 +23,7 @@ exports.friendslist = function(options, callback) {
 	var err;
 
 	if(!options.username || options.username == '') {
-		return new Error('You must login first');
+		return callback(new Error('You must login first'));
 	}
 
 	ret_data = [
@@ -38,6 +38,6 @@ exports.friendslist = function(options, callback) {
 			hide: 'N'
 		}
 	];
-	callback(err, ret_data);
 
+	callback(err, ret_data);
 }

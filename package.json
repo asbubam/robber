@@ -8,7 +8,8 @@
   "dependencies": {
     "restify": "latest",
     "step": "latest",
-    "bunyan": "latest"
+    "bunyan": "latest",
+		"mongodb": "latest"
   }
 }
 
