@@ -1,6 +1,6 @@
 GET /api/login
 	req: username, password
-	res: logged (y|n), points, rob_count, robbed_count, auth_key
+	res: logged (y|n), points, rob_count, robbed_count
 
 GET /api/friendslist
 	req: username

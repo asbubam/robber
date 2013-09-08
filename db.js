@@ -30,24 +30,27 @@ function populateDB() {
 			rob_count: 0,
 			robbed_count: 0,
 			logged: 'N',
+			hide: 'N',
 			auth_key: null
 		},
 		{
-			username: "test2",
+			username: "alice",
 			pw: "1234",
 			points: 1000,
 			rob_count: 0,
 			robbed_count: 0,
 			logged: 'N',
+			hide: 'N',
 			auth_key: null
 		},
 		{
-			username: "test3",
+			username: "tom",
 			pw: "1234",
 			points: 1000,
 			rob_count: 0,
 			robbed_count: 0,
 			logged: 'N',
+			hide: 'N',
 			auth_key: null
 		}
 	];
